@@ -19,5 +19,5 @@ Route::get('/', function () {
 });
 
 Route::get('/livros',function(){
-    Return view('livros');
+    return view('livros');
 });
