@@ -13,11 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
 
-});
+
+Route:: get('/livros',[livrosController::class,'index']);
 
 Route::get('/livros',function(){
-    return view('livros');
+    return view('livros'); //"Adair Carlos Fernandes"
+});//->name('home-index');
+
+route::fallback(function(){
+    return "Atenção erro";
 });
